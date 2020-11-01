@@ -5,7 +5,8 @@ namespace BlogDoFt.QueueComponent.Configurations
     public sealed class ConfigConnectionProvider
     {
         private static ConfigConnectionProvider _singletonInstance;
-        private readonly Dictionary<string, QueueConnConfiguration> _configurations = new Dictionary<string, QueueConnConfiguration>(); 
+
+        private readonly Dictionary<string, QueueConnConfiguration> _configurations = new Dictionary<string, QueueConnConfiguration>();
 
         private ConfigConnectionProvider()
         {
