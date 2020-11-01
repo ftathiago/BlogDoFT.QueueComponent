@@ -54,7 +54,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           ./.sonar/scanner/dotnet-sonarscanner begin /k:"ftathiago_BlogDoFt.QueueComponent" /o:"ftathiago" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutput=coverage.opencover.xml /p:CoverletOutputFormat=opencover -l trx 
+          dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -l trx 
           ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
       - name: Codecov
         # You may pin to the exact commit or the version.
